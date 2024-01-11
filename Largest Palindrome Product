@@ -1,0 +1,17 @@
+#!/bin/python3
+
+import sys
+    
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    maxi=0
+    for i in range(110,990,11):
+        for j in range(100,1000):
+            prod=i*j
+            if (str(prod)==str(prod)[::-1]) and (prod<n):
+                if(prod>maxi):
+                    maxi=prod
+    print(maxi)     
+    
+
